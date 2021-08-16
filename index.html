@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Bank Of DOM</title>
+  </head>
+  <body>
+    <header class="bg-purple-100 py-8 text-center shadow">
+      <h1 class="text-3xl text-purple-700 font-bold">Bank Of Dom</h1>
+    </header>
+
+    <main class="md:container md:mx-auto my-8 xl:w-2/4 px-4">
+      <!-- Balance section start -->
+      <section class="mb-8">
+        <div class="grid md:grid-cols-3 gap-4 text-white text-center">
+          <div class="bg-purple-600 py-6 px-8 rounded shadow-xl">
+            <h3 class="font-semibold lg:text-xl">Deposit Amount :</h3>
+            <h2 class="text-5xl font-thin">$ <span id="deposit_balance">0.00</span></h2>
+          </div>
+
+          <div class="bg-red-600 py-6 px-8 rounded shadow-xl">
+            <h3 class="font-semibold lg:text-xl">Withdraw Amount :</h3>
+            <h2 class="text-5xl font-thin">$ <span id="withdrawAmount">0.00</span></h2>
+          </div>
+
+          <div class="bg-green-600 py-6 px-8 rounded shadow-xl">
+            <h3 class="font-semibold lg:text-xl">Current Balance :</h3>
+            <h2 class="text-5xl font-thin">$ <span id="current_balance">0.00</span></h2>
+          </div>
+        </div>
+      </section>
+      <!-- Balance section end -->
+
+      <!-- Control Section start-->
+      <section class="mb-8">
+        <div class="grid md:grid-cols-2">
+          <div id="deposit" class="bg-purple-100 p-6">
+            <form action="#">
+              <input
+                type="number"
+                id="depositInput"
+                class="border border-transparent rounded py-2 px-2 w-full placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-600 shadow-2xl "
+                placeholder="Enter Deposit Amount"
+              />
+              <button
+              id="depositBtn"
+                class="
+                  bg-purple-600
+                  text-white
+                  py-2
+                  px-4
+                  text-xl
+                  rounded
+                  shadow-xl
+                  block
+                  mt-2
+                  w-full
+                "
+              >
+                Deposit
+              </button>
+            </form>
+          </div>
+          <div id="withdraw" class="bg-red-100 p-6">
+            <form action="#">
+              <input
+                type="number"
+                id="withdrawInput"
+                class="border border-transparent rounded py-2 px-2 w-full placeholder-red-300 focus:outline-none focus:ring-2 focus:ring-red-600 shadow-2xl"
+                placeholder="Enter Withdraw Amount"
+              />
+              <button
+                id="withdrawBtn"
+                class="
+                  bg-red-600
+                  text-white
+                  py-2
+                  px-4
+                  text-xl
+                  rounded
+                  shadow-xl
+                  block
+                  mt-2
+                  w-full
+                "
+              >
+                Withdraw
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Control Section end-->
+    </main>
+    <script src="calculation.js"></script>
+  </body>
+</html>
